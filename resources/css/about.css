@@ -1,0 +1,391 @@
+/* resources/css/about.css */
+
+.about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Герой секция */
+.about-hero {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #FFF9F0 0%, #fff 100%);
+    border-radius: 30px;
+    border: 2px solid #D4A5A5;
+    margin-bottom: 30px;
+}
+
+.about-hero-title {
+    font-size: 42px;
+    color: #4A4A4A;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.about-hero-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.about-hero-decoration {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.decoration-item {
+    font-size: 32px;
+    animation: bounce 2s infinite;
+}
+
+.decoration-item:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.decoration-item:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+/* Общие стили секций */
+.about-section {
+    margin-bottom: 50px;
+}
+
+.about-section-title {
+    font-size: 30px;
+    color: #4A4A4A;
+    margin-bottom: 30px;
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+}
+
+.about-section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background-color: #D4A5A5;
+    border-radius: 2px;
+}
+
+.text-center {
+    text-align: center;
+    display: block;
+}
+
+.text-center::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Сетка истории */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-text {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.image-placeholder {
+    background: linear-gradient(135deg, #FFF9F0 0%, #ffe6e6 100%);
+    border: 2px solid #D4A5A5;
+    border-radius: 25px;
+    padding: 40px 30px;
+    text-align: center;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-icon {
+    font-size: 100px;
+    opacity: 0.7;
+}
+
+/* Ценности */
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.value-card {
+    background-color: #FFF9F0;
+    border: 2px solid #D4A5A5;
+    border-radius: 20px;
+    padding: 25px 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.value-card:hover {
+    transform: translateY(-8px);
+}
+
+.value-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    display: inline-block;
+    background: white;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    border: 2px solid #D4A5A5;
+}
+
+.value-title {
+    font-size: 18px;
+    color: #4A4A4A;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.value-text {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Команда */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.team-card {
+    text-align: center;
+    background-color: #FFF9F0;
+    border: 2px solid #D4A5A5;
+    border-radius: 20px;
+    padding: 25px 15px;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+}
+
+.team-photo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 15px;
+    background: linear-gradient(135deg, #fff 0%, #ffe6e6 100%);
+    border: 3px solid #D4A5A5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo-icon {
+    font-size: 60px;
+}
+
+.team-name {
+    font-size: 20px;
+    color: #4A4A4A;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+.team-role {
+    font-size: 15px;
+    color: #B35C5C;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.team-desc {
+    font-size: 13px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Статистика */
+.stats-section {
+    background: linear-gradient(135deg, #FFF9F0 0%, #fff 100%);
+    border: 2px solid #D4A5A5;
+    border-radius: 30px;
+    padding: 40px 25px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 40px;
+    font-weight: 700;
+    color: #B35C5C;
+    margin-bottom: 8px;
+}
+
+.stat-label {
+    font-size: 15px;
+    color: #666;
+}
+
+/* Отзывы */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.review-card {
+    background-color: white;
+    border: 2px solid #D4A5A5;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.review-text {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #4A4A4A;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.author-icon {
+    font-size: 26px;
+    color: #D4A5A5;
+}
+
+.author-name {
+    font-size: 15px;
+    font-weight: 600;
+    color: #4A4A4A;
+    margin-bottom: 2px;
+}
+
+.review-date {
+    font-size: 11px;
+    color: #999;
+}
+
+/* Призыв к действию */
+.cta-section {
+    margin-bottom: 25px;
+}
+
+.cta-card {
+    background: linear-gradient(135deg, #D4A5A5 0%, #c48d8d 100%);
+    border-radius: 30px;
+    padding: 45px 30px;
+    text-align: center;
+    color: white;
+}
+
+.cta-title {
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.cta-text {
+    font-size: 16px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 35px;
+    background-color: white;
+    color: #B35C5C;
+    text-decoration: none;
+    border-radius: 35px;
+    font-weight: 600;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Адаптация */
+@media (max-width: 900px) {
+    .about-hero-title {
+        font-size: 36px;
+    }
+    
+    .about-grid {
+        gap: 30px;
+    }
+    
+    .values-grid,
+    .team-grid,
+    .stats-grid,
+    .reviews-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .about-hero-title {
+        font-size: 30px;
+    }
+    
+    .about-hero-subtitle {
+        font-size: 16px;
+    }
+    
+    .about-section-title {
+        font-size: 26px;
+    }
+    
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .values-grid,
+    .team-grid,
+    .stats-grid,
+    .reviews-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-title {
+        font-size: 24px;
+    }
+    
+    .cta-text {
+        font-size: 15px;
+    }
+    
+    .cta-button {
+        padding: 10px 25px;
+        font-size: 15px;
+    }
+}

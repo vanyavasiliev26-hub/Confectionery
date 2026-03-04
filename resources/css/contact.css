@@ -1,0 +1,342 @@
+/* resources/css/contact.css */
+
+.contacts-page {
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 1300px; /* Уменьшил максимальную ширину */
+    margin: 30px auto;
+    padding: 0 30px;
+}
+
+/* Контейнер для двух колонок */
+.contacts-container {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+/* Левая колонка с контактной информацией */
+.contact-info-side {
+    flex: 0 0 320px; /* Фиксированная ширина */
+    background-color: #FFF9F0;
+    border: 2px solid #D4A5A5;
+    border-radius: 25px;
+    padding: 30px 25px;
+    position: sticky;
+    top: 30px;
+}
+
+.contact-info-side h2 {
+    color: #4A4A4A;
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0 0 25px 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #D4A5A5;
+}
+
+/* Список контактов */
+.info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.info-item {
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.info-icon {
+    font-size: 24px;
+    min-width: 40px;
+    height: 40px;
+    background-color: rgba(212, 165, 165, 0.1);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-label {
+    color: #B35C5C;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.info-value {
+    color: #4A4A4A;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* Социальные сети */
+.social-links {
+    margin-top: 25px;
+    padding-top: 25px;
+    border-top: 2px solid #D4A5A5;
+}
+
+.social-links h3 {
+    color: #4A4A4A;
+    font-size: 18px;
+    font-weight: 600;
+    margin: 0 0 15px 0;
+}
+
+.social-icons {
+    display: flex;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 44px;
+    height: 44px;
+    background-color: #D4A5A5;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    text-decoration: none;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #B35C5C;
+    transform: translateY(-3px);
+}
+
+/* Правая колонка с формой */
+.form-side {
+    flex: 1;
+    background-color: #FFF9F0;
+    border: 2px solid #D4A5A5;
+    border-radius: 25px;
+    padding: 35px;
+}
+
+.form-side h1 {
+    color: #4A4A4A;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 0 25px 0;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.form-side h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background-color: #D4A5A5;
+    border-radius: 2px;
+}
+
+/* Форма */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px; /* Уменьшил отступы */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    color: #4A4A4A;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px; /* Уменьшил паддинги */
+    border: 2px solid #e8d5d5;
+    border-radius: 15px;
+    font-size: 15px;
+    color: #4A4A4A;
+    background-color: #ffffff;
+    transition: all 0.3s ease;
+    font-family: inherit;
+}
+
+.form-group textarea {
+    min-height: 120px; /* Уменьшил высоту */
+    resize: vertical;
+}
+
+.form-group input:hover,
+.form-group textarea:hover {
+    border-color: #D4A5A5;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #B35C5C;
+    box-shadow: 0 0 0 3px rgba(212, 165, 165, 0.2);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #b5a5a5;
+    font-size: 14px;
+}
+
+/* Кнопка отправки */
+.submit-btn {
+    background-color: #D4A5A5;
+    color: white;
+    border: none;
+    padding: 14px 28px; /* Уменьшил паддинги */
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border: 2px solid transparent;
+}
+
+.submit-btn:hover {
+    background-color: #B35C5C;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(179, 92, 92, 0.2);
+}
+
+/* Сообщения об ошибках и успехе */
+.block-error {
+    background-color: #fff2f0;
+    border: 2px solid #ffb5b5;
+    border-radius: 12px;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+}
+
+.block-error ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.block-error li {
+    color: #c53030;
+    font-size: 14px;
+    padding: 4px 0;
+    position: relative;
+    padding-left: 22px;
+}
+
+.block-error li::before {
+    content: '⚠️';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    font-size: 13px;
+}
+
+.success-message {
+    background-color: #d4edda;
+    border: 2px solid #c3e6cb;
+    border-radius: 12px;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    color: #155724;
+    font-size: 14px;
+}
+
+/* Адаптация для планшетов */
+@media (max-width: 1000px) {
+    .contacts-container {
+        gap: 20px;
+    }
+    
+    .contact-info-side {
+        flex: 0 0 280px;
+        padding: 25px 20px;
+    }
+}
+
+@media (max-width: 850px) {
+    .contacts-container {
+        flex-direction: column;
+    }
+    
+    .contact-info-side {
+        flex: auto;
+        width: 100%;
+        position: static;
+    }
+    
+    .info-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 600px) {
+    .contacts-page {
+        padding: 0 15px;
+        margin: 15px auto;
+    }
+    
+    .contact-info-side,
+    .form-side {
+        padding: 20px;
+        border-radius: 20px;
+    }
+    
+    .form-side h1 {
+        font-size: 24px;
+    }
+    
+    .info-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .submit-btn {
+        padding: 12px 24px;
+        font-size: 15px;
+    }
+}
+
+/* Анимация */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contacts-container {
+    animation: fadeIn 0.5s ease-out;
+}
